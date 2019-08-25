@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,19 +9,32 @@
     <link rel="stylesheet" href="assets/css/reset.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b73f20f84b.js"></script>
 </head>
-
 <body>
-    <h1>Can You Guess The Vine</h1>
-    <div id="timer"></div>
-    <div id="question"></div>
-    <img id="photo" src=""></img>
-    <div id="answers"></div>
-
+    <div class="page-content">
+        <div class="card shadow-lg">
+        <div id="header">
+            <h1>Do You Know The Vine</h1>
+        </div>
+        <div class="card-content">
+        <div id="instructions">Instructions: Fill in the blank from the popular vine. Try and see how many you can get
+            correct.</div>
+        <div id="quiz">
+            <div id="timer"></div>
+            <div id="question"></div>
+            <img id="photo" src=""></img>
+            <div id="answers"></div>
+        </div>
+        <div id="result"></div>
+    </div>
+        <div id="footer"><button id="start" onClick="setGame()"><i class="fa fa-play fa-lg" aria-hidden="true"></i></button></div>
+    </div>
+</div>
+    
     <script src="assets/javascript/app.js"></script>
 </body>
-
 </html>
