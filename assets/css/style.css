@@ -5,6 +5,17 @@ body{
     margin: 0 auto;
     text-align: center;
 }
+.card {
+    margin-top:25px !important;
+    margin-bottom: 25px !important;
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+}
+.card-content {
+    height: 600px !important;
+    padding: 25px;
+}
 h1 {
     font-family: 'Pacifico', cursive !important;
     background-color: #04bf8c;
@@ -17,6 +28,15 @@ h1 {
     width: 300px;
     text-align: center;
     margin: 0 auto;
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: 200;
+    background-color: #04bf8c;
+    color: white;
+    border-radius: 8px;
+}
+.answer-button:hover, #start:hover {
+    background-color:#008563;
+    color: white;
 }
 #timer, #question {
     height: 50px;
@@ -45,14 +65,3 @@ h1 {
     justify-content: center !important;
 }
 
-.card {
-    margin-top:25px !important;
-    margin-bottom: 25px !important;
-    width: 60%;
-    text-align: center;
-    margin: 0 auto;
-}
-.card-content {
-    height: 600px !important;
-    padding: 25px;
-}
