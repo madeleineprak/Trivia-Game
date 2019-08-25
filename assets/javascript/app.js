@@ -94,7 +94,7 @@ $(document).on("click", ".answer-button", function () {
     }
 });
 // Adds all the vines.
-addVine("\"______.\"", "ok", ["hello", "O.K.", "oi", "hey"], "assets/images/ok.jpg", "assets/images/ok.gif");
+addVine("\"______.\"", "O.K.", ["hello", "O.K.", "oi", "hey"], "assets/images/ok.jpg", "assets/images/ok.gif");
 addVine("\"I smell like ______.\"", "beef", ["beef", "potatos", "flowers", "berries"], "assets/images/beef.jpg", "assets/images/beef.gif");
 addVine("\"______.\"", "wow", ["cool", "whoa", "rad", "wow"], "assets/images/wow.jpg", "assets/images/wow.gif");
 addVine("\"Look at all those ______!\"", "chickens", ["ducks", "geese", "birds", "chickens"], "assets/images/chickens.jpg", "assets/images/chickens.gif");
