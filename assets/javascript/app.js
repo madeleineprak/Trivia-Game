@@ -19,11 +19,11 @@ function addVine(vineSentence, vineAnswer, vinePossibleAnswers, vinePhoto, vineG
 // Sets a timer for each question.
 function setTimer() {
     time = 10;
-    $("#timer").html("<h6>Time: " + time + "</h6>");   
+    $("#timer").html("<h6><i class='fas fa-hourglass-half'></i>" + "   " + time + "</h6>");   
     intervalId = setInterval(function () {    
         time -= 1;
         if (time >= 0) {
-            $("#timer").html("<h6>Time: " + time + "</h6>");
+            $("#timer").html("<h6><i class='fas fa-hourglass-half'></i>" + "   " + time + "</h6>");
         }
         if (time === -1) { // makes sure it counts 0
             clearInterval(intervalId);
