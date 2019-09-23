@@ -15,13 +15,12 @@ body{
     height: 100% !important;
     padding: 25px;
 }
-
 #phone-display {
     width: 500px;
     text-align: center;
     margin: 0 auto;
+    margin-top: 20px;
 }
-
 h1 {
     font-family: 'Pacifico', cursive !important;
     background-color: #04bf8c;
@@ -76,7 +75,6 @@ h1 {
 .row {
     padding: 5px;
 }
-
 @media only screen and (max-width:768px) {
     .card {
         width: 100% !important;
