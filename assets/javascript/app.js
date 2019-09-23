@@ -36,7 +36,6 @@ function setTimer() {
 function setGame() {
     $("#instructions").hide();
     $("#start").hide();
-    // $("#footer").text("Madeleine Prak 2019."); Going to fix this later.
     $("#quiz").show();
     $("#result").html("");
     setTimer();
@@ -78,7 +77,7 @@ function showQuizResult(){
     $("#quiz").hide();
     // $("#footer").text("");
     $("#start").show();
-    $("#result").html("<h4>Nice! You got " + numCorrect + " correct, " + numWrong + " wrong and " + numNotAnswered + " not answered out of " + totalVines +" total.</h4>");
+    $("#result").html("<h4>Nice! You got " + numCorrect + " correct and " + numWrong + " wrong out of " + totalVines +" vines.</h4>");
 }
 // Registers which answer the user chooses and outputs if it is right or wrong accordingly.
 $(document).on("click", ".answer-button", function () {
@@ -103,5 +102,5 @@ addVine("\"______ James.\"", "Lebron", ["Kevin", "Rick", "Lennie", "Lebron"], "a
 addVine("\"Oh my god. I love ______. ______'s my life.\"", "Chipotle", ["Chick-Fil-A", "Taco Bell", "Pizza Hut", "Chipotle"], "assets/images/chipotle.jpg", "assets/images/chipotle.gif");
 addVine("Who is this boy?", "Gavin", ["Liam","Logan","Noah","Gavin"], "assets/images/gavin.jpg", "assets/images/gavin.gif");
 addVine("______!!!", "Lauren", ["Carole", "Kate", "Lauren", "Stacy"], "assets/images/mcflurry.jpg", "assets/images/lauren.gif");
-addVine("\"Who was the hottest ______ driver you've ever hard?\"", "Uber", ["Uber", "Lyft", "bus","taxi"], "assets/images/uber.jpg", "assets/images/uber.gif");
+addVine("\"Who was the hottest __ driver you've ever had?\"", "Uber", ["Uber", "Lyft", "bus","taxi"], "assets/images/uber.jpg", "assets/images/uber.gif");
 addVine("\"______!\"", "Hzzzzaaaah", ["Ahhhhhh","Skrrrrrrt","Eeeeeeek","Hzzzzaaaah"], "assets/images/rat.jpg", "assets/images/rat.gif");
