@@ -75,7 +75,20 @@ h1 {
 .row {
     padding: 5px;
 }
+#without-phone {
+    display: none;
+}
+#phone-display {
+    display: block;
+}
 @media only screen and (max-width:768px) {
+    #without-phone {
+        display: block;
+        height: 100vh !important;
+    }
+    #phone-display {
+        display: none;
+    }
     .card {
         width: 100% !important;
         height: 100% !important;
