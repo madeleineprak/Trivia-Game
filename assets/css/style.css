@@ -45,13 +45,13 @@ h1 {
     background-color:#008563;
     color: white;
 }
-#timer, #question {
+.timer, .question {
     height: 50px;
 }
-#photo {
+.photo {
     margin-bottom:25px;
 }
-#start {
+.start {
     display: block;
     width: 50px;
     text-align: center;
@@ -60,7 +60,7 @@ h1 {
     background-color: #04bf8c;
     color: white;
 }
-#footer {
+.footer {
     background-color: #333433;
     bottom: 0;
     width: 100%;

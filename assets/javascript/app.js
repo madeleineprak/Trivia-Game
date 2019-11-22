@@ -19,11 +19,11 @@ function addVine(vineSentence, vineAnswer, vinePossibleAnswers, vinePhoto, vineG
 // Sets a timer for each question.
 function setTimer() {
     time = 10;
-    $("#timer").html("<h6><i class='fas fa-hourglass-half'></i>" + "   " + time + "</h6>");   
+    $(".timer").html("<h6><i class='fas fa-hourglass-half'></i>" + "   " + time + "</h6>");   
     intervalId = setInterval(function () {    
         time -= 1;
         if (time >= 0) {
-            $("#timer").html("<h6><i class='fas fa-hourglass-half'></i>" + "   " + time + "</h6>");
+            $(".timer").html("<h6><i class='fas fa-hourglass-half'></i>" + "   " + time + "</h6>");
         }
         if (time === -1) { // makes sure it counts 0
             clearInterval(intervalId);
@@ -34,18 +34,18 @@ function setTimer() {
 };
 // Sets up with game with a timer and the current question.
 function setGame() {
-    $("#instructions").hide();
-    $("#start").hide();
-    $("#quiz").show();
-    $("#result").html("");
+    $(".instructions").hide();
+    $(".start").hide();
+    $(".quiz").show();
+    $(".result").html("");
     setTimer();
     displayQuestion(currentQuestionIndex);
 }
 // Retrieves from the vine array and sets up the current question.
 function displayQuestion(currentQuestionIndex) {
-    $("#answers").html("");
-    $("#question").html("<h3>" + vinesArray[currentQuestionIndex].sentence + "</h3>");
-    $("#photo").attr("src", vinesArray[currentQuestionIndex].photo).height(300).width(300).css("object-fit", "cover");
+    $(".answers").html("");
+    $(".question").html("<h3>" + vinesArray[currentQuestionIndex].sentence + "</h3>");
+    $(".photo").attr("src", vinesArray[currentQuestionIndex].photo).height(300).width(300).css("object-fit", "cover");
     // Creates the possible answer buttons
     for (i = 0; i < vinesArray[currentQuestionIndex].possibleAnswers.length; i++) {
         //Creates a button for each answer
@@ -53,16 +53,16 @@ function displayQuestion(currentQuestionIndex) {
         answerButton.addClass("answer-button"); 
         answerButton.attr("data-number", i + 1);
         // Adds the buttons
-        $("#answers").append(answerButton);
+        $(".answers").append(answerButton);
     }
 }
 // Gets called after user chooses answer for each question.
 function showQuestionResult(outcome) {
-    $("#timer").html("");
-    $("#photo").attr("src", vinesArray[currentQuestionIndex].gif);
-    $("#question").html("");
-    $("#answers").html("");
-    $("#result").html("<h4>" + outcome + " The correct answer is \"" + vinesArray[currentQuestionIndex].answer + "\".</h4>");
+    $(".timer").html("");
+    $(".photo").attr("src", vinesArray[currentQuestionIndex].gif);
+    $(".question").html("");
+    $(".answers").html("");
+    $(".result").html("<h4>" + outcome + " The correct answer is \"" + vinesArray[currentQuestionIndex].answer + "\".</h4>");
     currentQuestionIndex++;
     if (currentQuestionIndex < vinesArray.length) {
         setTimeout(setGame, 5000);
@@ -74,10 +74,10 @@ function showQuestionResult(outcome) {
 // Gets called at the end when all questions have been answered.
 function showQuizResult(){
     var totalVines = vinesArray.length;
-    $("#quiz").hide();
+    $(".quiz").hide();
     // $("#footer").text("");
-    $("#start").show();
-    $("#result").html("<h4>Nice! You got " + numCorrect + " correct and " + numWrong + " wrong out of " + totalVines +" vines.</h4>");
+    $(".start").show();
+    $(".result").html("<h4>Nice! You got " + numCorrect + " correct and " + numWrong + " wrong out of " + totalVines +" vines.</h4>");
 }
 // Registers which answer the user chooses and outputs if it is right or wrong accordingly.
 $(document).on("click", ".answer-button", function () {
